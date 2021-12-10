@@ -1,0 +1,266 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdkWorkshopStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://892090217348/ap-northeast-2",
+      "properties": {
+        "templateFile": "CdkWorkshopStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdkWorkshopStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488",
+              "id": "549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488",
+              "packaging": "zip",
+              "sourceHash": "549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488",
+              "s3BucketParameter": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3Bucket656798B0",
+              "s3KeyParameter": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3VersionKeyA6266CA1",
+              "artifactHashParameter": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488ArtifactHash7CE0B5A3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:102:40)",
+              "AssetCode.bind (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:341:29)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/my-function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionServiceRole41691664",
+            "trace": [
+              "new Role (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-iam/lib/role.ts:199:18)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:321:31)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/my-function/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionSecurityGroup85A12135",
+            "trace": [
+              "new SecurityGroup (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:272:26)",
+              "NodejsFunction.configureVpc (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:648:52)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:411:23)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/my-function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionDF753486",
+            "trace": [
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:391:35)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3Bucket656798B0",
+            "trace": [
+              "new FileAssetParameters (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:102:40)",
+              "AssetCode.bind (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:341:29)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3VersionKeyA6266CA1",
+            "trace": [
+              "new FileAssetParameters (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:102:40)",
+              "AssetCode.bind (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:341:29)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/AssetParameters/549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488ArtifactHash7CE0B5A3",
+            "trace": [
+              "new FileAssetParameters (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "LegacyStackSynthesizer.addFileAsset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:37)",
+              "new Asset (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:102:40)",
+              "AssetCode.bind (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda/lib/function.ts:341:29)",
+              "new NodejsFunction (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/aws-lambda-nodejs/lib/function.ts:53:5)",
+              "new CdkWorkshopStack (/home/ec2-user/environment/cdk-workshop/lib/cdk-workshop-stack.ts:20:24)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/bin/cdk-workshop.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/CdkWorkshopStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/ec2-user/environment/cdk-workshop/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (node:events:510:26)",
+              "process.emit (node:events:390:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (/home/ec2-user/environment/cdk-workshop/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdkWorkshopStack"
+    }
+  }
+}

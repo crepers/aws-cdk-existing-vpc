@@ -1,0 +1,171 @@
+{
+  "Resources": {
+    "myfunctionServiceRole41691664": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          },
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/my-function/ServiceRole/Resource"
+      }
+    },
+    "myfunctionSecurityGroup85A12135": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Automatic security group for Lambda Function CdkWorkshopStackmyfunction5A726658",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": "vpc-01e189c76a27a0f94"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/my-function/SecurityGroup/Resource"
+      }
+    },
+    "myfunctionDF753486": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3Bucket656798B0"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3VersionKeyA6266CA1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3VersionKeyA6266CA1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "myfunctionServiceRole41691664",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+          }
+        },
+        "Handler": "index.main",
+        "Runtime": "nodejs14.x",
+        "VpcConfig": {
+          "SecurityGroupIds": [
+            {
+              "Fn::GetAtt": [
+                "myfunctionSecurityGroup85A12135",
+                "GroupId"
+              ]
+            }
+          ],
+          "SubnetIds": [
+            "subnet-0681438a2d9fbda9c",
+            "subnet-0222f59be0c86a280",
+            "subnet-03dbbd564c3c923a4"
+          ]
+        }
+      },
+      "DependsOn": [
+        "myfunctionServiceRole41691664"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/my-function/Resource",
+        "aws:asset:path": "asset.549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488",
+        "aws:asset:original-path": "/home/ec2-user/environment/cdk-workshop",
+        "aws:asset:is-bundled": true,
+        "aws:asset:property": "Code"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VPQW7CQAx8C3fHkFL1XECCW1WFF7iOQZuQ3WrtbYWi/Xt3gzj0NJqxx+Npsd2+4mb1Tr/acD+uZw5RcD4b8QidaEiRBXaqYkW7On+FQ/BqMbHB4eI/KdIkJrGS536Gem6+0fTVU+NDL4PixwLH5Nlc8OBowrkLN1mMBTPotqEapLjkFY77xKPYnlRA+KX8JZyis/sphvRdnf+EDI9ILINnUM5QH8BB1z/tW6lb2g7qXBOTNzcJdg/8A3Ufy3AKAQAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "CdkWorkshopStack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3Bucket656798B0": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488\""
+    },
+    "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488S3VersionKeyA6266CA1": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488\""
+    },
+    "AssetParameters549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488ArtifactHash7CE0B5A3": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"549b251c5418f1de8cf1008c5a98a98308a35aa0cb2d59b438f504fcbef09488\""
+    }
+  }
+}
